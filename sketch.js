@@ -7,7 +7,7 @@ function preload() {
 	font = loadFont("font/VCR_OSD_MONO_1.001.ttf")
 }
 function setup() {
-  createCanvas(1430, 770);
+  createCanvas(1650, 880);
 	textAlign(CENTER)
 
 //   createGrid(10)
@@ -45,7 +45,7 @@ function createGrid(size){
 }
 
 function displayTime() {
-	const myPoints = font.textToPoints(doubleDigits(currentH)+":"+doubleDigits(currentM)+":"+doubleDigits(currentS), width*1/10, height*6/10, 250)
+	const myPoints = font.textToPoints(doubleDigits(currentH)+":"+doubleDigits(currentM)+":"+doubleDigits(currentS), width*1.5/10, height*6/10, 250)
 	myPoints.forEach(point => {
 		const toCollor = myGrid.getCell(Math.round(point.x/10), Math.round(point.y/10))
 		toCollor.color = "red"
